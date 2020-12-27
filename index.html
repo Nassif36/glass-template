@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <!--heading-->
+    <header class="site-header contenedor">
+        <div class="barra">
+            <div class="logo">
+                <a href="#">
+                    <h1>Khalil & Design</h1>
+                </a>
+            </div>
+            <ul class="navegacion ">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Room</a></li>
+            </ul>
+            <button>
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <!--fin heading-->
+    <main class="contenedor">
+        <article class="seccion-main">
+            <div class="imagen-main">
+                <img src="img/img-1.png" alt="">    
+            </div>
+             <div class="texto-main">
+                 <p class="objetivo">Ricolin</p>
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex similique fugit omnis tenetur
+                     odit, autem at minima soluta ea quam repellat voluptatem aut perspiciatis maxime pariatur
+                     dolorem saepe iusto cum iste distinctio dignissimos exercitationem, explicabo, deserunt
+                     voluptatibus. Obcaecati voluptatem, perspiciatis unde, quia qui exercitationem debitis quod
+                     ab quas nostrum atque.</p>
+             </div>
+        </article>
+        <!--Fin del Articulo-->
+  
+        <article class="seccion-main">
+             <div class="texto-main">
+                <p class="burbuja-p">Pebete</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex similique fugit omnis tenetur
+                     odit, autem at minima soluta ea quam repellat voluptatem aut perspiciatis maxime pariatur
+                     dolorem saepe iusto cum iste distinctio dignissimos exercitationem, explicabo, deserunt
+                     voluptatibus. Obcaecati voluptatem, perspiciatis unde, quia qui exercitationem debitis quod
+                     ab quas nostrum atque.</p>
+             </div>
+            <div class="imagen-main circular">
+                <img src="img/img-2.jpg" alt="">
+            </div>
+        </article>
+        <!--Fin del Articulo-->
+    </main>
+    <div class="sesgo-arriba"></div>
+    <div class="sesgo"></div>
+        <section class="skills">
+            <div class="skill-cuadro">
+                <div class="texto-cuadro">
+                    <p class="skill-titulo">Inglés</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, alias!</p>
+                </div>
+            </div>
+            <div class="skill-cuadro">
+                <div class="texto-cuadro">
+                    <p class="skill-titulo">Músico</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, alias!</p>
+                </div>
+            </div>
+            <div class="skill-cuadro">
+                <div class="texto-cuadro">
+                    <p class="skill-titulo">Coffee</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, alias!</p>
+                </div>
+            </div>
+            <div class="skill-cuadro">
+                <div class="texto-cuadro">
+                    <p class="skill-titulo">Books</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, alias!</p>
+                </div>
+            </div>
+        </section>
+    <div class="sesgo-abajo">
+
+    </div>
+    <script src="https://kit.fontawesome.com/f69e951070.js" crossorigin="anonymous"></script>
+    <script>
+        var menu = document.querySelector('.barra');
+        var menuBtn = document.querySelector(".barra button");
+        var menuLink = document.querySelector(".navegacion a")
+        menuBtn.addEventListener('click', ()=> {
+            menu.classList.toggle('opened');
+        });
+    </script>
+</body>
+</html>
