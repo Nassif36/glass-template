@@ -19,11 +19,11 @@ html {
     padding: 0;
 }
 body {
-    background: #fc00ff;
+    background: #2c2e2e8a;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+    background: -webkit-linear-gradient(to right, #4e4e4e, #898a8a8a);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #00dbde, #fc00ff);
+    background: linear-gradient(to right, #4e4e4e, #898a8a8a);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Nunito Sans', sans-serif;
     color: var(--color-primario);
@@ -72,9 +72,27 @@ a {
         transform: translate(0%);
     }
 }
+@keyframes arriba {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes rotar {
+    from {
+        transform: rotate3d(100%);
+    }
+
+    to {
+        transform: rotate(0%);
+    }
+}
 /** framework **/
 .contenedor {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -122,7 +140,8 @@ a {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        
+
+           
     }
         .navegacion {
             animation: navkey .5s ease-out;
@@ -134,9 +153,9 @@ a {
          padding: 3px;
         transition: border ease-in .3s;
     }
-
     .navegacion li a:hover {
         overflow: hidden;
+     
         border-bottom: 1px solid var(--color-primario);
     } 
 }
@@ -169,6 +188,12 @@ a {
     }
 }
 @media (max-width: 768px ) {
+    .barra {
+        justify-content: space-between;
+    }
+    .logo {
+        flex-basis: 90%;
+    }
     .barra button {
         display: block;
         width: 40px;
@@ -211,32 +236,29 @@ a {
         position: fixed;
         top: 0;
         right: 0;
-        width: 80%;
-        height: 100%;
-        background: linear-gradient(#110811, #6200ff );
+        width:100%;
+        background: linear-gradient(#110811ce, #dbdfde );
         filter: contrast(15px);
         color: #ffffff;
-        padding: 46px;
+        padding: 23px 16px;
         flex-direction: column;
-        align-items: flex-end;
-        padding-top: 80px;
-        transform: translateX(100%);
+        align-items: center;
+        transform: translatey(-100%);
         transition: transform 0.5s;
         z-index: 4;
     }
     .navegacion li {
         display: block;
-        width: 66%;
+        width: 50%;
         text-align: center;
-        border: 2px solid rgb(204, 192, 192);
-        border-radius: 5px 1px 1px;
-        background-color:var(--cuarto);
-        padding: 15px;
+        border: 2px solid rgb(12, 12, 12);;
+        background-color: #1312129c;
+        padding: 5px;
         box-shadow: 0 15px 19px rgba(0, 0, 0, 0.3);
-        margin: 32px 0;
+        margin: 12px 0;
     }
     .barra.opened .navegacion {
-        transform: translateX(0);
+        transform: translateY(0);
     }
     .barra.opened button {
         color: #ffffff;
@@ -245,10 +267,44 @@ a {
         display: flex;
         justify-content: space-evenly;
     }
+    .redes {
+        position: fixed;
+        margin-right: 5px;
+    }
 }
 
 /** fin header **/
 
+/** intro **/
+
+.intro-conteiner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+.redes {
+     animation: arriba .9s ease;
+}
+.redes ul li {
+    padding: 9px;
+    
+}
+i.fab {
+    font-size: 40px;
+   
+}
+.fa-instagram:hover {
+    color: rgba(209, 18, 4, 0.747);
+}
+.fa-facebook:hover {
+    color: blue;
+}
+.fa-whatsapp:hover {
+    color: green;
+}
 /**main**/
 
 /** Articulos*/
@@ -264,7 +320,7 @@ a {
     .seccion-main {
         margin-top: 0;
         display: flex;
-        padding: 13rem 10px;
+        padding: 0 10px;
         align-items: center;
         flex-direction: row;
         margin-bottom: 3rem;
@@ -275,9 +331,7 @@ a {
     display: flex;
     justify-content: space-evenly;
     position: relative;
-    flex-basis: 50%;
-    margin-top: 5%;
-    
+    flex-basis: 45%;
 }
 .imagen-main img {
     min-height: 50%;
@@ -285,21 +339,14 @@ a {
     min-width: 50%;
 }
 .texto-main {
-    flex-basis: 50%;
+    flex-basis: 45%;
 }
 .texto-main p:last-child {
     background-color:var(--glass);
     padding: 15px;
     border-radius: 0 0 0 15px;
 }
-.objetivo {
-    display: inline-block;
-    padding: 10px;
-    border-bottom: 4px solid #000000;   
-    background: var(--glass);
-    margin-bottom: 5px;
-        position: relative;
-}
+
 .burbuja-p {
     text-align: center;
     margin: 0 auto;
@@ -314,71 +361,32 @@ a {
 .circular img {    
     height: 50%;
     width:50%;
-    border: 12px groove var(--tercero);
+    border: 12px groove var(--color-primario);
     border-radius: 500px;
     padding: 0;
 }
 /** fin de articulos del main*/
-.sesgo {
-    height: 350px;
-    width: 100%;
 
-
-    position: relative;
-    top: -270px;
-    z-index: 1;
-    background: linear-gradient(to left, #a030a142, #545355d3);
-    margin-bottom: 10rem;
-}
 .sesgo-abajo {
     height: 250px;
     position: relative;
-    top: -900px;
+    top: -600px;
     width: 100%;
-    transform: skewY(-5deg);
-    z-index: 1;
-    background: linear-gradient(to left, #fb00ff42, #1912221c);
+    transform: skewY(19deg);
+    z-index: -1;
+    background: linear-gradient(to left, #00000042, #1912221c);
     margin-bottom: 10rem;
 }
 .sesgo-arriba {
     height: 250px;
     width: 100%;
-    transform: skewY(6deg);
+    transform: skewY(19deg);
     z-index: 1;
-    background: linear-gradient(to left, #fb00ff42, #1912221c);
-    margin-bottom: 10rem;
+    background: linear-gradient(to left, #ffffff42, #1912221c);
+    margin-bottom: 10rem;   
 }
 
-/** skills **/
-.skills {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -730px;
-    bottom: 0;
-    border-bottom: 1px solid black;
-    padding: 27px;
-}
-@media (min-width: 968px) {
-    .skills {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-}
-.skill-cuadro {
-    flex-basis: 20%;
-    z-index: 3;
-    padding: 13px;
-    text-align: center;
-}
-@media (min-width: 968px) {
-    .skill-cuadro {
-        padding: 0;
-        text-align: left;
-        
-    }
-}
+
 .texto-cuadro {
     font-size: 2rem;
     flex-basis: 50%;
